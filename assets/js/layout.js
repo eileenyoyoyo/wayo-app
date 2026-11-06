@@ -32,7 +32,7 @@
 
   const header = `
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="announce" role="note">Complimentary delivery over $500</div>
+  <div class="announce" role="note">Launching on Kickstarter · Reserve the early-bird price</div>
   <header class="site-header">
     <div class="container header-inner">
       <button class="icon-btn menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
@@ -44,10 +44,7 @@
       </a>
       <nav class="main-nav" aria-label="Primary">${links}</nav>
       <div class="header-actions">
-        <button class="icon-btn cart-toggle" aria-label="Open bag" aria-controls="cart-drawer">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
-          <span class="cart-count" data-cart-count hidden>0</span>
-        </button>
+        <a class="header-cta" href="index.html#launch">Reserve</a>
       </div>
     </div>
     <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile" hidden>
@@ -71,6 +68,8 @@
       <div>
         <h4>Shop</h4>
         <ul>
+          <li><a href="perch.html">PERCH</a></li>
+          <li><a href="glide.html">GLIDE</a></li>
           <li><a href="shop.html#cat">Cat</a></li>
           <li><a href="shop.html#dog">Dog</a></li>
         </ul>
@@ -96,35 +95,23 @@
     </div>
   </footer>
 
-  <dialog class="quick-view" id="quick-view" aria-labelledby="qv-title">
-    <button class="icon-btn qv-close" aria-label="Close" data-close-dialog>
+  <dialog class="reserve" id="reserve" aria-labelledby="reserve-title">
+    <button class="icon-btn reserve-close" aria-label="Close" data-close-dialog>
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
     </button>
-    <div class="qv-body" data-qv-body></div>
-  </dialog>
-
-  <div class="drawer-scrim" data-cart-scrim hidden></div>
-  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping bag" aria-hidden="true" tabindex="-1">
-    <div class="cart-head">
-      <h2>Your bag</h2>
-      <button class="icon-btn" aria-label="Close bag" data-cart-close>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
-      </button>
-    </div>
-    <div class="cart-shipping" data-cart-shipping></div>
-    <ul class="cart-items" data-cart-items></ul>
-    <div class="cart-empty" data-cart-empty>
-      <p>Your bag is empty.</p>
-      <a href="shop.html" class="btn btn-primary">Shop</a>
-    </div>
-    <div class="cart-foot" data-cart-foot hidden>
-      <div class="cart-row"><span>Subtotal</span><strong data-cart-subtotal>$0</strong></div>
-      <p class="cart-note">Taxes calculated at checkout.</p>
-      <button class="btn btn-primary btn-block" data-checkout>Checkout</button>
-    </div>
-  </aside>
-
-  <div class="toast" role="status" aria-live="polite" data-toast></div>`;
+    <p class="eyebrow">Launch list</p>
+    <h2 id="reserve-title" data-reserve-title>Reserve</h2>
+    <p class="reserve-sub" data-reserve-sub></p>
+    <p class="reserve-copy">Reservations open with our Kickstarter. Leave your email and we will send your early-bird link first.</p>
+    <form id="reserve-form" novalidate>
+      <input type="hidden" name="product" />
+      <input type="hidden" name="sku" />
+      <label for="reserve-email" class="visually-hidden">Email</label>
+      <input id="reserve-email" type="email" name="email" placeholder="Email" autocomplete="email" required />
+      <button type="submit" class="btn btn-primary">Join the list</button>
+    </form>
+    <p class="reserve-msg" role="status" aria-live="polite" data-reserve-msg></p>
+  </dialog>`;
 
   document.body.insertAdjacentHTML("afterbegin", sprite + header);
   document.body.insertAdjacentHTML("beforeend", footer);
