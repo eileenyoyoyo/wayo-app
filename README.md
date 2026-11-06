@@ -28,3 +28,10 @@ assets/js/app.js        rendering, filters, quick view, cart
 - Replace the generated SVG product art with photography
 - Connect checkout (e.g. Shopify Buy Button, Stripe Checkout) at the `[data-checkout]` button
 - Wire the newsletter form to your email provider
+
+## Logo
+- `assets/img/peekaboo-logo.svg`: arched lockup (wordmark over the peeking cat)
+- `assets/img/peekaboo-mark.svg`: cat mark on its own
+- `assets/img/favicon.svg`: browser icon
+
+On the site the cat is defined once as `<symbol id="peek-cat">` in `index.html` and reused with `<use href="#peek-cat">`.

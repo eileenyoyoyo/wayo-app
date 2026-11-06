@@ -6,7 +6,7 @@
   <title>PEEKABOO — Smart Design, for City Pets</title>
   <meta name="description" content="PEEKABOO. Smart design, for city pets. Luxury pet furniture shaped by instinct, sized for the city." />
   <meta name="theme-color" content="#f6f1ea" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f1b17'/%3E%3Cpath d='M10 36 Q32 14 54 36' stroke='%23c9a46a' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='24' cy='40' r='4' fill='%23f6f1ea'/%3E%3Ccircle cx='40' cy='40' r='4' fill='%23f6f1ea'/%3E%3C/svg%3E" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -14,6 +14,22 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- PEEKABOO cat mark: one drawing, reused everywhere via <use href="#peek-cat"> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="peek-cat" viewBox="-3 -3 132 58">
+      <g stroke-linejoin="round">
+        <path d="M-1 62 L22.5 2 L40.5 25.5 Q63 18.5 85.5 25.5 L103.5 2 L127 62Z" fill="#fff" stroke="#1f1b17" stroke-width="3.2"/>
+        <path d="M18 31 L24.5 13 L35.5 27.5 Q26 28.5 18 31Z" fill="#efc2c0"/>
+        <path d="M108 31 L101.5 13 L90.5 27.5 Q100 28.5 108 31Z" fill="#efc2c0"/>
+        <circle cx="38" cy="56" r="16.5" fill="#fff" stroke="#1f1b17" stroke-width="2.6"/>
+        <circle cx="40.6" cy="57" r="13.4" fill="#1f1b17"/>
+        <circle cx="88" cy="56" r="16.5" fill="#fff" stroke="#1f1b17" stroke-width="2.6"/>
+        <circle cx="85.4" cy="57" r="13.4" fill="#1f1b17"/>
+        <path d="M57.5 50.5 H68.5 L65.5 55 H60.5Z" fill="#e88f93"/>
+      </g>
+    </symbol>
+  </svg>
 
   <div class="announce" role="note">
     Complimentary delivery over $500
@@ -26,9 +42,7 @@
       </button>
 
       <a href="#top" class="logo" aria-label="PEEKABOO home">
-        <span class="logo-mark" aria-hidden="true">
-          <svg viewBox="0 0 48 28"><path d="M3 20 Q24 -2 45 20" /><circle cx="17" cy="21" r="3.2" /><circle cx="31" cy="21" r="3.2" /></svg>
-        </span>
+        <svg class="logo-cat" viewBox="-3 -3 132 58" aria-hidden="true"><use href="#peek-cat"/></svg>
         <span class="logo-word">PEEKABOO</span>
       </a>
 
@@ -94,14 +108,10 @@
               <!-- cave bed -->
               <path d="M70 390 Q70 200 200 200 Q330 200 330 390 Z" fill="#f3ece2"/>
               <path d="M70 390 Q70 200 200 200 Q330 200 330 390" fill="none" stroke="#e0d3c1" stroke-width="2"/>
-              <path d="M130 390 Q130 270 200 270 Q270 270 270 390 Z" fill="#2a241f"/>
-              <!-- eyes peeking -->
-              <g class="peek-eyes">
-                <ellipse cx="178" cy="335" rx="9" ry="10" fill="#d8b46a"/>
-                <ellipse cx="222" cy="335" rx="9" ry="10" fill="#d8b46a"/>
-                <ellipse cx="178" cy="336" rx="2.5" ry="8" fill="#1a1612"/>
-                <ellipse cx="222" cy="336" rx="2.5" ry="8" fill="#1a1612"/>
-              </g>
+              <clipPath id="hero-hole"><path d="M130 390 Q130 270 200 270 Q270 270 270 390 Z"/></clipPath>
+              <linearGradient id="hg-hole" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9a68c"/><stop offset="1" stop-color="#d8c8b2"/></linearGradient>
+              <path d="M130 390 Q130 270 200 270 Q270 270 270 390 Z" fill="url(#hg-hole)"/>
+              <g clip-path="url(#hero-hole)" class="hero-cat"><use href="#peek-cat" x="120" y="318" width="160" height="70"/></g>
               <!-- base -->
               <rect x="60" y="388" width="280" height="14" rx="4" fill="url(#hg-wood)"/>
               <rect x="80" y="402" width="8" height="26" fill="#8d6239"/>
@@ -321,11 +331,12 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <a href="#top" class="logo logo-light" aria-label="PEEKABOO home">
-          <span class="logo-mark" aria-hidden="true">
-            <svg viewBox="0 0 48 28"><path d="M3 20 Q24 -2 45 20" /><circle cx="17" cy="21" r="3.2" /><circle cx="31" cy="21" r="3.2" /></svg>
-          </span>
-          <span class="logo-word">PEEKABOO</span>
+        <a href="#top" class="logo-arch" aria-label="PEEKABOO home">
+          <svg viewBox="0 0 320 170" aria-hidden="true">
+            <path id="footer-arc" d="M36 108 Q160 4 284 108" fill="none"/>
+            <text text-anchor="middle"><textPath href="#footer-arc" startOffset="50%">PEEKABOO</textPath></text>
+            <use href="#peek-cat" x="67" y="91" width="186" height="82"/>
+          </svg>
         </a>
         <p>Smart design, for city pets.</p>
       </div>
