@@ -275,7 +275,7 @@
           </div>
 
           <details class="qv-details" open>
-            <summary>Materials &amp; dimensions</summary>
+            <summary>Details</summary>
             <ul>${p.details.map((d) => `<li>${esc(d)}</li>`).join("")}</ul>
           </details>
         </div>`;
@@ -331,7 +331,7 @@
     saveCart();
     renderCart();
     const p = byId(id);
-    toast(`${p.name} added to your bag`);
+    toast(`${p.name} — added`);
     bumpCount();
   }
 
@@ -385,7 +385,7 @@
       const left = Math.max(0, FREE_SHIPPING - subtotal);
       const pct = Math.min(100, (subtotal / FREE_SHIPPING) * 100);
       ship.innerHTML = `
-        <p>${left > 0 ? `You're <strong>${money(left)}</strong> away from complimentary white-glove delivery.` : "You've unlocked <strong>complimentary white-glove delivery</strong>."}</p>
+        <p>${left > 0 ? `<strong>${money(left)}</strong> to complimentary delivery.` : "Complimentary delivery <strong>unlocked</strong>."}</p>
         <div class="ship-bar"><span style="width:${pct}%"></span></div>`;
       ship.hidden = false;
     } else ship.hidden = true;
@@ -432,7 +432,7 @@
   });
 
   $("[data-checkout]").addEventListener("click", () => {
-    toast("Checkout is coming soon — your bag has been saved.");
+    toast("Checkout opens soon. Your bag is saved.");
   });
 
   function bumpCount() {
@@ -482,12 +482,12 @@
     const input = form.email;
     const msg = $(".form-msg", form);
     if (!input.checkValidity() || !input.value) {
-      msg.textContent = "Please enter a valid email address.";
+      msg.textContent = "Enter a valid email.";
       msg.className = "form-msg is-error";
       input.focus();
       return;
     }
-    msg.textContent = "Welcome to the Den. Your 10% code is on its way.";
+    msg.textContent = "Welcome. Your code is on its way.";
     msg.className = "form-msg is-ok";
     form.reset();
   });

@@ -1,6 +1,6 @@
 # PEEKABOO
 
-Luxury pet furniture and objects, designed with aesthetics and by our pets' instincts:
+Smart design, for city pets. Luxury pet furniture shaped by instinct and sized for the city:
 **hide, perch, scratch, nest**, plus dine and roam.
 
 This is a static, dependency-free storefront. Open `index.html` in a browser, or serve the folder:

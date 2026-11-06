@@ -1,7 +1,5 @@
 /* PEEKABOO product catalogue.
- * Each product's artwork is generated as inline SVG from its `shape` and
- * `colors`, so the shop works without photography. Swap `image` in with a
- * real photo URL later and the card will use it instead.
+ * Artwork is generated as inline SVG from each product's `shape` and `colors`.
  */
 window.PEEKABOO_PRODUCTS = [
   {
@@ -20,7 +18,7 @@ window.PEEKABOO_PRODUCTS = [
     ],
     sizes: ["Small (to 6 kg)", "Large (to 12 kg)"],
     description:
-      "An arched, den-like retreat that lets your pet watch the room from a place of total security. The solid walnut base lifts the bed off cool floors; the bouclé shell is removable and machine-washable.",
+      "A private den with a view. Raised on walnut, off cold floors.",
     details: ["Solid American walnut base", "Removable bouclé cover", "Memory-foam cushion", "W 56 × D 48 × H 44 cm"]
   },
   {
@@ -38,7 +36,7 @@ window.PEEKABOO_PRODUCTS = [
     ],
     sizes: ["Three levels", "Four levels"],
     description:
-      "A tower that reads as a piece of architecture. Staggered platforms satisfy the climbing instinct and give every cat in the house its own altitude. Sisal-wrapped posts are replaceable in seconds.",
+      "Four levels of territory on a 50 cm footprint.",
     details: ["Solid white oak", "Replaceable sisal posts", "Wool felt pads", "Wall anchor included", "H 152 cm (four levels)"]
   },
   {
@@ -56,7 +54,7 @@ window.PEEKABOO_PRODUCTS = [
     ],
     sizes: ["S · 60 cm", "M · 80 cm", "L · 100 cm"],
     description:
-      "A deep, round bolster that supports the circle-and-curl ritual. Calming for anxious sleepers, with a raised rim that doubles as a chin rest.",
+      "A deep bolster for the circle-and-curl ritual.",
     details: ["Felted New Zealand wool shell", "Recycled-fibre bolster", "Non-slip base", "Machine-washable cover"]
   },
   {
@@ -73,7 +71,7 @@ window.PEEKABOO_PRODUCTS = [
     ],
     sizes: ["One size"],
     description:
-      "A rocking curve of natural cork set in a bent-ash cradle — for stretching, scratching and an afternoon nap. Cork is naturally antimicrobial and wonderfully quiet underfoot.",
+      "Scratcher by day. Lounger by night.",
     details: ["Natural Portuguese cork", "Steam-bent ash frame", "Reversible insert", "L 68 cm"]
   },
   {
@@ -90,7 +88,7 @@ window.PEEKABOO_PRODUCTS = [
     ],
     sizes: ["Low · for cats", "Tall · for dogs"],
     description:
-      "Wide, shallow stoneware bowls set at an ergonomic height — gentler on necks, and kinder to whiskers. Hand-glazed in a small studio, dishwasher-safe.",
+      "Raised for posture. Wide for whiskers.",
     details: ["Food-safe glazed stoneware", "Solid walnut stand", "Dishwasher-safe bowls", "Whisker-friendly 14 cm diameter"]
   },
   {
@@ -107,7 +105,7 @@ window.PEEKABOO_PRODUCTS = [
     ],
     sizes: ["Single", "Set of three"],
     description:
-      "A floating sun-spot. Mount one by the window or stagger three to build a vertical path along the wall. Holds up to 15 kg with hidden steel brackets.",
+      "A floating sun-spot. Zero floor space.",
     details: ["Solid oak", "Removable wool pad", "Concealed steel bracket", "W 50 × D 28 cm"]
   },
   {
@@ -126,7 +124,7 @@ window.PEEKABOO_PRODUCTS = [
     ],
     sizes: ["Medium", "Large", "Giant"],
     description:
-      "A tailored, low sofa built at your dog's height — with a supportive bolster on three sides for leaning, sprawling and keeping watch over the door.",
+      "A sofa at their height. Bolstered on three sides.",
     details: ["Kiln-dried walnut frame", "Stain-resistant performance linen", "Orthopaedic foam core", "Removable, washable covers"]
   },
   {
@@ -143,7 +141,7 @@ window.PEEKABOO_PRODUCTS = [
     ],
     sizes: ["One size"],
     description:
-      "A soft, collapsible felt tunnel for ambush play and quiet escapes. Two peek-holes let curious faces pop out — peekaboo, literally.",
+      "Ambush, escape, repeat. Folds flat.",
     details: ["100% merino felt", "Collapses flat for storage", "L 110 cm", "Spot clean"]
   },
   {
@@ -160,7 +158,7 @@ window.PEEKABOO_PRODUCTS = [
     ],
     sizes: ["S", "M", "L"],
     description:
-      "For the daily wander. Hand-stitched vegetable-tanned leather that softens and darkens with every walk, finished with solid brass hardware.",
+      "For the daily city walk. Ages beautifully.",
     details: ["Italian vegetable-tanned leather", "Solid brass hardware", "Hand-stitched edges", "Lead length 140 cm"]
   },
   {
@@ -177,7 +175,7 @@ window.PEEKABOO_PRODUCTS = [
     ],
     sizes: ["H 70 cm", "H 90 cm"],
     description:
-      "Tall enough for a full vertical stretch and heavy enough never to wobble. A honed stone base makes it a quiet sculpture between scratches.",
+      "A full stretch, on a stone base that never wobbles.",
     details: ["Honed travertine base (6 kg)", "Replaceable natural sisal sleeve", "Felt-protected underside"]
   }
 ];
