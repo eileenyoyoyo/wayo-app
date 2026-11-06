@@ -2,12 +2,12 @@
   <defs><clipPath id="c"><rect x="-3" y="-3" width="132" height="58"/></clipPath></defs>
   <g clip-path="url(#c)" stroke-linejoin="round">
     <path d="M-1 62 L22.5 2 L40.5 25.5 Q63 18.5 85.5 25.5 L103.5 2 L127 62Z" fill="#fff" stroke="#1f1b17" stroke-width="3.2"/>
-    <path d="M18 31 L24.5 13 L35.5 27.5 Q26 28.5 18 31Z" fill="#efc2c0"/>
-    <path d="M108 31 L101.5 13 L90.5 27.5 Q100 28.5 108 31Z" fill="#efc2c0"/>
+    <path d="M18 31 L24.5 13 L35.5 27.5 Q26 28.5 18 31Z" fill="#efc8b2"/>
+    <path d="M108 31 L101.5 13 L90.5 27.5 Q100 28.5 108 31Z" fill="#efc8b2"/>
     <circle cx="38" cy="56" r="16.5" fill="#fff" stroke="#1f1b17" stroke-width="2.6"/>
     <circle cx="40.6" cy="57" r="13.4" fill="#1f1b17"/>
     <circle cx="88" cy="56" r="16.5" fill="#fff" stroke="#1f1b17" stroke-width="2.6"/>
     <circle cx="85.4" cy="57" r="13.4" fill="#1f1b17"/>
-    <path d="M57.5 50.5 H68.5 L65.5 55 H60.5Z" fill="#e88f93"/>
+    <path d="M57.5 50.5 H68.5 L65.5 55 H60.5Z" fill="#e2621b"/>
   </g>
 </svg>

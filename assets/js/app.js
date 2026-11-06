@@ -27,15 +27,15 @@
         <path d="M140 300 Q140 190 200 190 Q260 190 260 300Z" fill="#2a241f"/>
         <ellipse cx="182" cy="262" rx="7" ry="8" fill="#d8b46a"/><ellipse cx="218" cy="262" rx="7" ry="8" fill="#d8b46a"/>
         <ellipse cx="182" cy="263" rx="2" ry="6" fill="#1a1612"/><ellipse cx="218" cy="263" rx="2" ry="6" fill="#1a1612"/>
-        <rect x="80" y="298" width="240" height="12" rx="4" fill="${a}"/>
+        <rect x="80" y="298" width="240" height="12" fill="${a}"/>
         <rect x="98" y="310" width="7" height="22" fill="${a}"/><rect x="295" y="310" width="7" height="22" fill="${a}"/>`,
       tower: `
         <rect x="150" y="80" width="14" height="250" fill="${a}"/><rect x="236" y="120" width="14" height="210" fill="${a}"/>
         <g stroke="#c9b28d" stroke-width="2" opacity=".7">${Array.from({ length: 14 }, (_, i) => `<path d="M150 ${150 + i * 12} h14 M236 ${170 + i * 10} h14"/>`).join("")}</g>
-        <rect x="110" y="320" width="180" height="14" rx="4" fill="${b}"/>
-        <rect x="120" y="230" width="90" height="12" rx="6" fill="${b}"/>
-        <rect x="200" y="160" width="100" height="12" rx="6" fill="${b}"/>
-        <path d="M110 92 Q110 66 157 66 Q204 66 204 92Z" fill="${b}"/><rect x="108" y="90" width="98" height="10" rx="5" fill="${b}"/>`,
+        <rect x="110" y="320" width="180" height="14" fill="${b}"/>
+        <rect x="120" y="230" width="90" height="12" fill="${b}"/>
+        <rect x="200" y="160" width="100" height="12" fill="${b}"/>
+        <path d="M110 92 Q110 66 157 66 Q204 66 204 92Z" fill="${b}"/><rect x="108" y="90" width="98" height="10" fill="${b}"/>`,
       nest: `
         <ellipse cx="200" cy="270" rx="140" ry="58" fill="${a}"/>
         <ellipse cx="200" cy="258" rx="132" ry="50" fill="${b}"/>
@@ -46,42 +46,42 @@
         <path d="M92 222 Q200 312 308 222 L300 210 Q200 290 100 210Z" fill="${b}"/>
         <g fill="#8a6440" opacity=".45">${Array.from({ length: 48 }, (_, i) => { const t = ((i * 0.618) % 1); const x = 104 + t * 192; const y = 214 + 76 * (1 - Math.pow((x - 200) / 104, 2)) * 0.9 + ((i * 7) % 9); return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="1.5"/>`; }).join("")}</g>`,
       bowls: `
-        <rect x="90" y="230" width="220" height="16" rx="5" fill="${a}"/>
+        <rect x="90" y="230" width="220" height="16" fill="${a}"/>
         <rect x="104" y="246" width="10" height="70" fill="${a}"/><rect x="286" y="246" width="10" height="70" fill="${a}"/>
         <path d="M108 230 Q108 196 150 196 Q192 196 192 230Z" fill="${b}"/>
         <path d="M208 230 Q208 196 250 196 Q292 196 292 230Z" fill="${b}"/>
         <ellipse cx="150" cy="198" rx="42" ry="6" fill="#000" opacity=".12"/><ellipse cx="250" cy="198" rx="42" ry="6" fill="#000" opacity=".12"/>`,
       shelf: `
-        <rect x="40" y="60" width="320" height="200" fill="#efe7da"/>
-        <rect x="56" y="76" width="140" height="168" fill="#cfdde0" opacity=".7"/><rect x="204" y="76" width="140" height="168" fill="#cfdde0" opacity=".7"/>
-        <rect x="100" y="270" width="200" height="18" rx="3" fill="${b}"/>
-        <rect x="110" y="258" width="180" height="12" rx="6" fill="${a}"/>
+        <rect x="40" y="60" width="320" height="200" fill="#d9ccb9"/>
+        <rect x="56" y="76" width="140" height="168" fill="#f4efe6"/><rect x="204" y="76" width="140" height="168" fill="#f4efe6"/>
+        <rect x="100" y="270" width="200" height="18" fill="${b}"/>
+        <rect x="110" y="258" width="180" height="12" fill="${a}"/>
         <path d="M150 258 Q150 220 186 222 Q200 200 214 222 Q250 220 250 258Z" fill="#2a241f"/>
         <path d="M188 222 l-6 -16 l14 10 M212 222 l6 -16 l-14 10" fill="#2a241f"/>`,
       sofa: `
         <rect x="70" y="170" width="260" height="90" rx="22" fill="${b}"/>
         <rect x="60" y="200" width="46" height="90" rx="18" fill="${b}"/><rect x="294" y="200" width="46" height="90" rx="18" fill="${b}"/>
         <rect x="104" y="236" width="192" height="50" rx="12" fill="${b}" stroke="#000" stroke-opacity=".08" stroke-width="2"/>
-        <rect x="70" y="288" width="260" height="10" rx="3" fill="${a}"/>
+        <rect x="70" y="288" width="260" height="10" fill="${a}"/>
         <rect x="84" y="298" width="8" height="24" fill="${a}"/><rect x="308" y="298" width="8" height="24" fill="${a}"/>`,
       tunnel: `
         <path d="M60 290 Q60 180 200 180 Q340 180 340 290Z" fill="${b}"/>
         <path d="M60 290 Q60 220 96 220 Q132 220 132 290Z" fill="${a}"/>
         <circle cx="236" cy="224" r="22" fill="${a}"/>
-        <ellipse cx="228" cy="226" rx="4" ry="5" fill="#d8b46a"/><ellipse cx="244" cy="226" rx="4" ry="5" fill="#d8b46a"/>
+        <ellipse cx="228" cy="226" ry="5" fill="#d8b46a"/><ellipse cx="244" cy="226" ry="5" fill="#d8b46a"/>
         <g stroke="#000" stroke-opacity=".08" stroke-width="2" fill="none"><path d="M160 186 Q150 240 160 290"/><path d="M290 200 Q300 240 296 290"/></g>`,
       leash: `
         <circle cx="200" cy="170" r="70" fill="none" stroke="${b}" stroke-width="18"/>
-        <rect x="186" y="232" width="28" height="18" rx="3" fill="${a}"/>
+        <rect x="186" y="232" width="28" height="18" fill="${a}"/>
         <path d="M214 240 C 290 250, 300 300, 250 320 S 140 330, 120 300" fill="none" stroke="${b}" stroke-width="12" stroke-linecap="round"/>
         <circle cx="120" cy="300" r="10" fill="none" stroke="${a}" stroke-width="5"/>
         <circle cx="200" cy="100" r="6" fill="${a}"/>`,
       pillar: `
-        <rect x="170" y="70" width="60" height="240" rx="6" fill="#c6a57a"/>
+        <rect x="170" y="70" width="60" height="240" fill="#c6a57a"/>
         <g stroke="#a8875c" stroke-width="2">${Array.from({ length: 30 }, (_, i) => `<path d="M170 ${76 + i * 8} h60"/>`).join("")}</g>
-        <rect x="120" y="308" width="160" height="28" rx="4" fill="${b}"/>
+        <rect x="120" y="308" width="160" height="28" fill="${b}"/>
         <rect x="120" y="308" width="160" height="5" fill="${a}" opacity=".5"/>
-        <rect x="160" y="60" width="80" height="12" rx="4" fill="${b}"/>`
+        <rect x="160" y="60" width="80" height="12" fill="${b}"/>`
     };
     return `<svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(product.name)} in ${esc(c.name)}">
       <rect width="400" height="400" fill="var(--art-bg, #ece4d8)"/>

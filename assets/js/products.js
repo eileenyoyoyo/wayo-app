@@ -12,9 +12,9 @@ window.PEEKABOO_PRODUCTS = [
     shape: "cave",
     badge: "Bestseller",
     colors: [
-      { name: "Ivory Bouclé", body: "#f1e9dd", accent: "#8d6239" },
-      { name: "Fog", body: "#cfcac2", accent: "#5b4a3c" },
-      { name: "Truffle", body: "#7a6556", accent: "#3a2c22" }
+      { name: "Cognac Leather", body: "#a0643a", accent: "#5e4130" },
+      { name: "Ivory Bouclé", body: "#f1ebe1", accent: "#cdae84" },
+      { name: "Orange", body: "#e2621b", accent: "#5e4130" }
     ],
     sizes: ["Small (to 6 kg)", "Large (to 12 kg)"],
     description:
@@ -31,8 +31,8 @@ window.PEEKABOO_PRODUCTS = [
     shape: "tower",
     badge: "New",
     colors: [
-      { name: "Natural Oak", body: "#d9bf98", accent: "#efe6d8" },
-      { name: "Smoked Oak", body: "#6b5442", accent: "#d8cbb8" }
+      { name: "Natural Oak", body: "#cdae84", accent: "#f1ebe1" },
+      { name: "Walnut", body: "#6b4a33", accent: "#e6ddcf" }
     ],
     sizes: ["Three levels", "Four levels"],
     description:
@@ -48,9 +48,9 @@ window.PEEKABOO_PRODUCTS = [
     instinct: "nest",
     shape: "nest",
     colors: [
-      { name: "Sand", body: "#e4d3ba", accent: "#c7ad8a" },
-      { name: "Sage", body: "#b9bea6", accent: "#8e9478" },
-      { name: "Clay", body: "#c99a7c", accent: "#a7745a" }
+      { name: "Ivory", body: "#f1ebe1", accent: "#d9ccb9" },
+      { name: "Cognac", body: "#a0643a", accent: "#7f4c29" },
+      { name: "Greige", body: "#bdb3a6", accent: "#9e9488" }
     ],
     sizes: ["S · 60 cm", "M · 80 cm", "L · 100 cm"],
     description:
@@ -66,8 +66,8 @@ window.PEEKABOO_PRODUCTS = [
     instinct: "scratch",
     shape: "arc",
     colors: [
-      { name: "Cork & Ash", body: "#b88b5e", accent: "#e8dcc8" },
-      { name: "Cork & Ebony", body: "#b88b5e", accent: "#2b2622" }
+      { name: "Cork & Oak", body: "#b88b5e", accent: "#cdae84" },
+      { name: "Cork & Walnut", body: "#b88b5e", accent: "#5e4130" }
     ],
     sizes: ["One size"],
     description:
@@ -83,8 +83,9 @@ window.PEEKABOO_PRODUCTS = [
     instinct: "dine",
     shape: "bowls",
     colors: [
-      { name: "Bone Glaze", body: "#efe8dc", accent: "#8d6239" },
-      { name: "Charcoal Glaze", body: "#3b3631", accent: "#b98a5a" }
+      { name: "Bone", body: "#efe8dc", accent: "#6b4a33" },
+      { name: "Espresso", body: "#2b211b", accent: "#cdae84" },
+      { name: "Orange", body: "#e2621b", accent: "#6b4a33" }
     ],
     sizes: ["Low · for cats", "Tall · for dogs"],
     description:
@@ -100,8 +101,8 @@ window.PEEKABOO_PRODUCTS = [
     instinct: "perch",
     shape: "shelf",
     colors: [
-      { name: "Oak & Oat", body: "#d9bf98", accent: "#efe6d8" },
-      { name: "Walnut & Charcoal", body: "#7d5a3c", accent: "#4a4440" }
+      { name: "Oak & Ivory", body: "#cdae84", accent: "#f1ebe1" },
+      { name: "Walnut & Cognac", body: "#6b4a33", accent: "#a0643a" }
     ],
     sizes: ["Single", "Set of three"],
     description:
@@ -118,9 +119,9 @@ window.PEEKABOO_PRODUCTS = [
     shape: "sofa",
     badge: "Limited",
     colors: [
-      { name: "Oat Linen", body: "#e2d6c4", accent: "#7d5a3c" },
-      { name: "Moss Velvet", body: "#6f765a", accent: "#4a3526" },
-      { name: "Ink Velvet", body: "#2f3440", accent: "#9b7650" }
+      { name: "Ivory Linen", body: "#e9e1d4", accent: "#6b4a33" },
+      { name: "Cognac Leather", body: "#a0643a", accent: "#4a3122" },
+      { name: "Espresso", body: "#3a2c23", accent: "#cdae84" }
     ],
     sizes: ["Medium", "Large", "Giant"],
     description:
@@ -136,8 +137,8 @@ window.PEEKABOO_PRODUCTS = [
     instinct: "hide",
     shape: "tunnel",
     colors: [
-      { name: "Pebble", body: "#bdb4a7", accent: "#2a241f" },
-      { name: "Rust", body: "#b46a45", accent: "#2a241f" }
+      { name: "Greige Felt", body: "#bdb3a6", accent: "#2b211b" },
+      { name: "Orange Felt", body: "#e2621b", accent: "#2b211b" }
     ],
     sizes: ["One size"],
     description:
@@ -153,8 +154,9 @@ window.PEEKABOO_PRODUCTS = [
     instinct: "roam",
     shape: "leash",
     colors: [
-      { name: "Cognac", body: "#a0643a", accent: "#c9a46a" },
-      { name: "Noir", body: "#2a2622", accent: "#c9a46a" }
+      { name: "Cognac", body: "#a0643a", accent: "#b8925a" },
+      { name: "Orange", body: "#e2621b", accent: "#b8925a" },
+      { name: "Noir", body: "#2a2622", accent: "#b8925a" }
     ],
     sizes: ["S", "M", "L"],
     description:
@@ -171,7 +173,7 @@ window.PEEKABOO_PRODUCTS = [
     shape: "pillar",
     colors: [
       { name: "Travertine", body: "#e9e0d0", accent: "#c3a57c" },
-      { name: "Nero Marquina", body: "#2b2826", accent: "#c3a57c" }
+      { name: "Nero", body: "#2b2826", accent: "#c3a57c" }
     ],
     sizes: ["H 70 cm", "H 90 cm"],
     description:
