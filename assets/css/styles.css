@@ -150,11 +150,9 @@ p { margin: 0 0 1em; }
 .hero h1 { font-size: clamp(46px, 6.6vw, 96px); margin-bottom: 32px; letter-spacing: -0.035em; }
 .lede { font-size: clamp(16px, 1.3vw, 18px); color: var(--muted); max-width: 30em; margin-bottom: 48px; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 32px; align-items: center; }
-.hero-art { position: relative; }
-.hero-frame { overflow: hidden; aspect-ratio: 5 / 6; }
-.hero-svg { width: 100%; height: 100%; }
-.hero-cat use { animation: peek 7s var(--ease) infinite; }
-@keyframes peek { 0%, 70%, 100% { transform: translateY(0); } 80%, 88% { transform: translateY(-8px); } }
+.hero-logo { justify-self: center; width: 100%; max-width: 440px; }
+.hero-logo svg { width: 100%; height: auto; overflow: visible; }
+.hero-logo text { font-family: var(--font-mark); font-weight: 500; font-size: 40px; letter-spacing: 7px; fill: var(--espresso); }
 
 /* ==========================================================================
    Sections
@@ -416,7 +414,7 @@ p { margin: 0 0 1em; }
   .logo-word { font-size: 19px; letter-spacing: .28em; margin-right: -.28em; }
   .logo-cat { width: 48px; margin-bottom: 3px; }
   .hero-grid { grid-template-columns: 1fr; }
-  .hero-art { max-width: 480px; width: 100%; }
+  .hero-logo { max-width: 300px; justify-self: start; margin-top: 24px; }
   .qv-body { grid-template-columns: 1fr; }
   .qv-media { max-height: 46vh; overflow: hidden; }
   .qv-info { padding: 32px 22px 28px; }

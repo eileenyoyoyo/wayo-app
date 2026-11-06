@@ -27,29 +27,13 @@
             <a href="library.html" class="btn btn-link">Library <span aria-hidden="true">→</span></a>
           </div>
         </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="hero-frame">
-            <svg viewBox="0 0 400 480" class="hero-svg">
-              <defs>
-                <linearGradient id="hg-hole" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9cbb6"/><stop offset="1" stop-color="#efe7da"/></linearGradient>
-                <clipPath id="hero-hole"><path d="M134 392 Q134 276 200 276 Q266 276 266 392 Z"/></clipPath>
-              </defs>
-              <rect width="400" height="480" fill="#eee8de"/>
-              <rect y="392" width="400" height="88" fill="#d8c3a2"/>
-              <g stroke="#c7ae88" stroke-width="1"><path d="M0 420 H400 M0 452 H400"/><path d="M120 392 V420 M290 420 V452 M60 452 V480 M330 392 V420"/></g>
-              <!-- cave bed: cognac leather shell, saddle stitching -->
-              <path d="M76 392 Q76 196 200 196 Q324 196 324 392 Z" fill="#a0643a"/>
-              <path d="M90 392 Q90 212 200 212 Q310 212 310 392" fill="none" stroke="#e8d6bd" stroke-width="1.6" stroke-dasharray="5 5" opacity=".75"/>
-              <path d="M134 392 Q134 276 200 276 Q266 276 266 392 Z" fill="url(#hg-hole)"/>
-              <g clip-path="url(#hero-hole)" class="hero-cat"><use href="#peek-cat" x="120" y="322" width="160" height="70"/></g>
-              <!-- walnut base -->
-              <rect x="66" y="390" width="268" height="10" fill="#5e4130"/>
-              <rect x="84" y="400" width="5" height="30" fill="#5e4130"/><rect x="311" y="400" width="5" height="30" fill="#5e4130"/>
-              <!-- orange accent object -->
-              <rect x="342" y="352" width="40" height="40" fill="#e2621b"/>
-              <rect x="342" y="352" width="40" height="7" fill="#c9541a"/>
-            </svg>
-          </div>
+        <div class="hero-logo" aria-hidden="true">
+          <svg viewBox="0 0 320 174">
+            <path id="hero-arc" d="M36 108 Q160 4 284 108" fill="none"/>
+            <text text-anchor="middle"><textPath href="#hero-arc" startOffset="50%">PEEKABOO</textPath></text>
+            <use href="#peek-cat" x="67" y="91" width="186" height="82"/>
+            <line x1="0" y1="173.2" x2="320" y2="173.2" stroke="#2b211b" stroke-width="1.2"/>
+          </svg>
         </div>
       </div>
     </section>
