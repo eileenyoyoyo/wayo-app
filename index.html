@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PEEKABOO — Luxury Pet Furniture, Designed by Instinct</title>
+  <meta name="description" content="PEEKABOO crafts luxury pet furniture and objects shaped by aesthetics and by your pet's natural instincts — to hide, perch, scratch and nest." />
+  <meta name="theme-color" content="#f6f1ea" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f1b17'/%3E%3Cpath d='M10 36 Q32 14 54 36' stroke='%23c9a46a' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='24' cy='40' r='4' fill='%23f6f1ea'/%3E%3Ccircle cx='40' cy='40' r='4' fill='%23f6f1ea'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="announce" role="note">
+    Complimentary white-glove delivery on furniture over $500 &nbsp;·&nbsp; Hand-finished in small batches
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <button class="icon-btn menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+
+      <a href="#top" class="logo" aria-label="PEEKABOO home">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 28"><path d="M3 20 Q24 -2 45 20" /><circle cx="17" cy="21" r="3.2" /><circle cx="31" cy="21" r="3.2" /></svg>
+        </span>
+        <span class="logo-word">PEEKABOO</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a href="#shop">Shop</a>
+        <a href="#instinct">Instinct</a>
+        <a href="#craft">Craft</a>
+        <a href="#journal">Journal</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn search-toggle" aria-label="Search products">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+        <button class="icon-btn cart-toggle" aria-label="Open bag" aria-controls="cart-drawer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span class="cart-count" data-cart-count hidden>0</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="search-bar" hidden>
+      <div class="container">
+        <label for="search-input" class="visually-hidden">Search products</label>
+        <input id="search-input" type="search" placeholder="Search beds, perches, scratchers…" autocomplete="off" />
+      </div>
+    </div>
+
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile" hidden>
+      <a href="#shop">Shop</a>
+      <a href="#instinct">Instinct</a>
+      <a href="#craft">Craft</a>
+      <a href="#journal">Journal</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">The Autumn Collection</p>
+          <h1>Designed by <em>instinct.</em><br />Refined by design.</h1>
+          <p class="lede">Luxury furniture and objects for cats and dogs — shaped around the way they already want to live: to hide, to perch, to scratch, to nest. Beautiful enough for your home. Right enough for theirs.</p>
+          <div class="hero-cta">
+            <a href="#shop" class="btn btn-primary">Shop the collection</a>
+            <a href="#instinct" class="btn btn-link">Our philosophy <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="hero-arch">
+            <svg viewBox="0 0 400 480" class="hero-svg">
+              <defs>
+                <linearGradient id="hg-wall" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#e9ddcc"/><stop offset="1" stop-color="#dccab2"/>
+                </linearGradient>
+                <linearGradient id="hg-wood" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#b98a5a"/><stop offset="1" stop-color="#8d6239"/>
+                </linearGradient>
+              </defs>
+              <rect width="400" height="480" fill="url(#hg-wall)"/>
+              <rect y="380" width="400" height="100" fill="#cdb79a"/>
+              <!-- cave bed -->
+              <path d="M70 390 Q70 200 200 200 Q330 200 330 390 Z" fill="#f3ece2"/>
+              <path d="M70 390 Q70 200 200 200 Q330 200 330 390" fill="none" stroke="#e0d3c1" stroke-width="2"/>
+              <path d="M130 390 Q130 270 200 270 Q270 270 270 390 Z" fill="#2a241f"/>
+              <!-- eyes peeking -->
+              <g class="peek-eyes">
+                <ellipse cx="178" cy="335" rx="9" ry="10" fill="#d8b46a"/>
+                <ellipse cx="222" cy="335" rx="9" ry="10" fill="#d8b46a"/>
+                <ellipse cx="178" cy="336" rx="2.5" ry="8" fill="#1a1612"/>
+                <ellipse cx="222" cy="336" rx="2.5" ry="8" fill="#1a1612"/>
+              </g>
+              <!-- base -->
+              <rect x="60" y="388" width="280" height="14" rx="4" fill="url(#hg-wood)"/>
+              <rect x="80" y="402" width="8" height="26" fill="#8d6239"/>
+              <rect x="312" y="402" width="8" height="26" fill="#8d6239"/>
+              <!-- plant -->
+              <rect x="338" y="330" width="34" height="50" rx="4" fill="#2c2722"/>
+              <path d="M355 330 C 340 280, 330 260, 345 230 M355 330 C 365 280, 380 260, 372 220 M355 330 C 355 290, 352 270, 358 250" stroke="#6b7b5a" stroke-width="4" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="hero-badge">
+            <span class="badge-num">01</span>
+            <span class="badge-text">The Hideaway<br/><small>Cave bed in bouclé &amp; walnut</small></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRESS / VALUES STRIP -->
+    <section class="strip" aria-label="Our promises">
+      <div class="container strip-inner">
+        <span>Solid hardwoods, FSC certified</span>
+        <span class="dot" aria-hidden="true"></span>
+        <span>Pet-safe, non-toxic finishes</span>
+        <span class="dot" aria-hidden="true"></span>
+        <span>Washable, replaceable textiles</span>
+        <span class="dot" aria-hidden="true"></span>
+        <span>10-year frame guarantee</span>
+      </div>
+    </section>
+
+    <!-- INSTINCT -->
+    <section class="section instinct" id="instinct">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Our philosophy</p>
+          <h2>Every piece begins with a <em>behaviour</em>, not a trend.</h2>
+          <p class="section-lede">We study how animals move, rest and feel safe — then design objects that answer those instincts with the restraint of fine furniture.</p>
+        </div>
+
+        <div class="instinct-grid">
+          <article class="instinct-card" data-instinct="hide">
+            <div class="instinct-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M8 52 Q8 14 32 14 Q56 14 56 52Z"/><path d="M20 52 Q20 30 32 30 Q44 30 44 52"/></svg>
+            </div>
+            <h3>Hide</h3>
+            <p>Enclosed, low-light retreats that let pets observe without being seen — the original peekaboo.</p>
+            <button class="text-btn" data-filter-instinct="hide">Shop Hide →</button>
+          </article>
+          <article class="instinct-card" data-instinct="perch">
+            <div class="instinct-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M10 54h44"/><path d="M32 54V18"/><path d="M18 18h28"/><path d="M22 34h20"/></svg>
+            </div>
+            <h3>Perch</h3>
+            <p>Elevated vantage points for surveying their kingdom — sculptural towers and window shelves.</p>
+            <button class="text-btn" data-filter-instinct="perch">Shop Perch →</button>
+          </article>
+          <article class="instinct-card" data-instinct="scratch">
+            <div class="instinct-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M18 12 L26 52"/><path d="M30 10 L36 54"/><path d="M42 12 L46 52"/></svg>
+            </div>
+            <h3>Scratch</h3>
+            <p>Natural sisal, cork and wool surfaces for marking, stretching and claw care — beautifully.</p>
+            <button class="text-btn" data-filter-instinct="scratch">Shop Scratch →</button>
+          </article>
+          <article class="instinct-card" data-instinct="nest">
+            <div class="instinct-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><ellipse cx="32" cy="40" rx="24" ry="12"/><ellipse cx="32" cy="38" rx="14" ry="6"/></svg>
+            </div>
+            <h3>Nest</h3>
+            <p>Bolstered, round forms that support the circling and curling instinct for deep, secure sleep.</p>
+            <button class="text-btn" data-filter-instinct="nest">Shop Nest →</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOP -->
+    <section class="section shop" id="shop">
+      <div class="container">
+        <div class="shop-head">
+          <div>
+            <p class="eyebrow">The Collection</p>
+            <h2>Objects for a shared life</h2>
+          </div>
+          <div class="shop-controls">
+            <div class="chip-group" role="group" aria-label="Filter by pet">
+              <button class="chip is-active" data-pet="all" aria-pressed="true">All</button>
+              <button class="chip" data-pet="cat" aria-pressed="false">Cats</button>
+              <button class="chip" data-pet="dog" aria-pressed="false">Dogs</button>
+            </div>
+            <label class="select-wrap">
+              <span class="visually-hidden">Sort products</span>
+              <select id="sort-select">
+                <option value="featured">Featured</option>
+                <option value="price-asc">Price: low to high</option>
+                <option value="price-desc">Price: high to low</option>
+                <option value="name">Name A–Z</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="chip-group instinct-filter" role="group" aria-label="Filter by instinct">
+          <button class="chip chip-ghost is-active" data-instinct-filter="all" aria-pressed="true">Every instinct</button>
+          <button class="chip chip-ghost" data-instinct-filter="hide" aria-pressed="false">Hide</button>
+          <button class="chip chip-ghost" data-instinct-filter="perch" aria-pressed="false">Perch</button>
+          <button class="chip chip-ghost" data-instinct-filter="scratch" aria-pressed="false">Scratch</button>
+          <button class="chip chip-ghost" data-instinct-filter="nest" aria-pressed="false">Nest</button>
+          <button class="chip chip-ghost" data-instinct-filter="dine" aria-pressed="false">Dine</button>
+          <button class="chip chip-ghost" data-instinct-filter="roam" aria-pressed="false">Roam</button>
+        </div>
+
+        <p class="result-count" aria-live="polite" data-result-count></p>
+        <div class="product-grid" data-product-grid></div>
+        <p class="empty-state" data-empty hidden>No pieces match those filters yet. <button class="text-btn" data-reset-filters>Reset filters</button></p>
+      </div>
+    </section>
+
+    <!-- CRAFT -->
+    <section class="section craft" id="craft">
+      <div class="container craft-grid">
+        <div class="craft-art" aria-hidden="true">
+          <svg viewBox="0 0 480 520">
+            <rect width="480" height="520" fill="#2a241f"/>
+            <g opacity=".9">
+              <path d="M0 400 C 120 360, 200 440, 480 380 L480 520 L0 520Z" fill="#3a322b"/>
+              <rect x="150" y="120" width="180" height="270" rx="90" fill="#c9a46a" opacity=".18"/>
+              <rect x="185" y="160" width="110" height="230" rx="55" fill="none" stroke="#c9a46a" stroke-width="2"/>
+              <path d="M200 330 h80 M200 300 h80 M200 270 h80 M200 240 h80" stroke="#c9a46a" stroke-width="1" opacity=".6"/>
+              <circle cx="240" cy="200" r="6" fill="#c9a46a"/>
+            </g>
+          </svg>
+        </div>
+        <div class="craft-copy">
+          <p class="eyebrow eyebrow-light">Craft &amp; material</p>
+          <h2>Made to be lived on, <em>not just looked at.</em></h2>
+          <p>Each PEEKABOO piece is built by a small family workshop from solid walnut, white oak and ash, joined by hand and finished with plant-based oils that are safe for curious tongues.</p>
+          <p>Our textiles — bouclé, felted New Zealand wool, natural sisal — are chosen for how they feel under paw and how they age in your home. Every cushion is removable and machine-washable; every scratch surface can be replaced, so the frame lasts a lifetime.</p>
+          <dl class="stats">
+            <div><dt>48h</dt><dd>of hand-finishing per tower</dd></div>
+            <div><dt>100%</dt><dd>non-toxic, VOC-free finishes</dd></div>
+            <div><dt>10 yr</dt><dd>frame guarantee</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section voices" aria-labelledby="voices-title">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow">Approved by the toughest critics</p>
+          <h2 id="voices-title">From homes that share the sofa</h2>
+        </div>
+        <div class="voice-grid">
+          <figure class="voice">
+            <blockquote>“Mochi ignored every bed we bought for three years. She moved into the Hideaway the afternoon it arrived — and it's the first pet thing I've wanted in the living room.”</blockquote>
+            <figcaption><strong>Hana &amp; Mochi</strong><span>British Shorthair · Seoul</span></figcaption>
+          </figure>
+          <figure class="voice">
+            <blockquote>“The Atelier Tower looks like a sculpture. Our two Bengals use every level, and the sisal swaps out in seconds.”</blockquote>
+            <figcaption><strong>Daniel, Kit &amp; Kaboodle</strong><span>Bengals · Copenhagen</span></figcaption>
+          </figure>
+          <figure class="voice">
+            <blockquote>“Our greyhound sleeps curled up in the Dune Nest like it was made for him. Honestly, it was.”</blockquote>
+            <figcaption><strong>Priya &amp; Biscuit</strong><span>Greyhound · London</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOURNAL -->
+    <section class="section journal" id="journal">
+      <div class="container">
+        <div class="shop-head">
+          <div>
+            <p class="eyebrow">The Journal</p>
+            <h2>Notes on living well, together</h2>
+          </div>
+        </div>
+        <div class="journal-grid">
+          <article class="journal-card">
+            <div class="journal-thumb tone-sand" aria-hidden="true"><span>Hide</span></div>
+            <p class="journal-meta">Behaviour · 5 min read</p>
+            <h3>Why your cat loves boxes — and what that means for your home</h3>
+          </article>
+          <article class="journal-card">
+            <div class="journal-thumb tone-olive" aria-hidden="true"><span>Perch</span></div>
+            <p class="journal-meta">Design · 4 min read</p>
+            <h3>Vertical territory: designing height into small apartments</h3>
+          </article>
+          <article class="journal-card">
+            <div class="journal-thumb tone-clay" aria-hidden="true"><span>Nest</span></div>
+            <p class="journal-meta">Wellbeing · 6 min read</p>
+            <h3>The science of the circle: how dogs choose where to sleep</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+      <div class="container newsletter-inner">
+        <div>
+          <h2>Join the Den</h2>
+          <p>Early access to limited editions, behaviour notes from our consultants, and 10% off your first order.</p>
+        </div>
+        <form class="newsletter-form" novalidate>
+          <label for="nl-email" class="visually-hidden">Email address</label>
+          <input id="nl-email" type="email" name="email" placeholder="Your email address" required autocomplete="email" />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+          <p class="form-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="logo logo-light" aria-label="PEEKABOO home">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 28"><path d="M3 20 Q24 -2 45 20" /><circle cx="17" cy="21" r="3.2" /><circle cx="31" cy="21" r="3.2" /></svg>
+          </span>
+          <span class="logo-word">PEEKABOO</span>
+        </a>
+        <p>Luxury pet furniture designed with aesthetics — and by our pets' instincts.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#shop" data-footer-pet="cat">For cats</a></li>
+          <li><a href="#shop" data-footer-pet="dog">For dogs</a></li>
+          <li><a href="#shop">New arrivals</a></li>
+          <li><a href="#shop">Gift cards</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Care</h4>
+        <ul>
+          <li><a href="#">Shipping &amp; delivery</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Material care</a></li>
+          <li><a href="#">Replacement parts</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Studio</h4>
+        <ul>
+          <li><a href="#instinct">Our philosophy</a></li>
+          <li><a href="#craft">Workshop</a></li>
+          <li><a href="#journal">Journal</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-base">
+      <span>© <span data-year></span> PEEKABOO Studio. All rights reserved.</span>
+      <span>Made with patience, for the ones who were here first.</span>
+    </div>
+  </footer>
+
+  <!-- QUICK VIEW -->
+  <dialog class="quick-view" id="quick-view" aria-labelledby="qv-title">
+    <button class="icon-btn qv-close" aria-label="Close" data-close-dialog>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <div class="qv-body" data-qv-body></div>
+  </dialog>
+
+  <!-- CART -->
+  <div class="drawer-scrim" data-cart-scrim hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping bag" aria-hidden="true" tabindex="-1">
+    <div class="cart-head">
+      <h2>Your bag</h2>
+      <button class="icon-btn" aria-label="Close bag" data-cart-close>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="cart-shipping" data-cart-shipping></div>
+    <ul class="cart-items" data-cart-items></ul>
+    <div class="cart-empty" data-cart-empty>
+      <p>Your bag is empty — for now.</p>
+      <a href="#shop" class="btn btn-primary" data-cart-close>Explore the collection</a>
+    </div>
+    <div class="cart-foot" data-cart-foot hidden>
+      <div class="cart-row"><span>Subtotal</span><strong data-cart-subtotal>$0</strong></div>
+      <p class="cart-note">Taxes and delivery calculated at checkout.</p>
+      <button class="btn btn-primary btn-block" data-checkout>Proceed to checkout</button>
+    </div>
+  </aside>
+
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
