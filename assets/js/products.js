@@ -5,10 +5,34 @@
  *   category  short label shown on the card (Rest, Climb, Scratch, Dine, Play, Walk…)
  *   featured  true → shown in the home page product rail
  *   price     base price; each larger size adds ~18%
+ *   image     photo path; when set it replaces the drawing everywhere
+ *   imagePosition  focal point for cropped views, e.g. "30% 50%"
+ *   spotlight true → large feature block on the home page (use on one product)
  *   shape     which drawing to use (cave, tower, nest, arc, bowls, shelf, sofa,
  *             tunnel, leash, pillar) until real photos replace it
  */
 window.PEEKABOO_PRODUCTS = [
+  {
+    id: "orbit-desk-perch",
+    category: "Perch",
+    featured: true,
+    spotlight: true,
+    name: "Orbit Desk Perch",
+    subtitle: "Desk-mounted bed · oak, leather & steel",
+    price: 590,
+    pets: ["cat"],
+    instinct: "perch",
+    image: "assets/img/products/orbit-desk-perch.jpg",
+    imagePosition: "4% 50%",
+    badge: "New",
+    colors: [
+      { name: "Oak & Cognac", body: "#c08a57", accent: "#a0643a" }
+    ],
+    sizes: ["One size"],
+    description:
+      "A bed that clamps to your desk. They stay close. The floor stays clear.",
+    details: ["Steam-bent oak shell", "Cognac leather trim", "Removable bouclé cushion", "Brushed steel swivel arm", "Clamps to the desk edge"]
+  },
   {
     id: "hideaway-cave",
     category: "Rest",

@@ -16,8 +16,11 @@
   /* ---------------------------------------------------------------------
    * Product artwork — simple, editorial SVG still-lifes per product shape
    * ------------------------------------------------------------------- */
-    function art(product, colorIndex = 0) {
+  function art(product, colorIndex = 0) {
     const c = product.colors[colorIndex] || product.colors[0];
+    if (product.image) {
+      return `<img class="product-photo" src="${esc(product.image)}" alt="${esc(product.name)} in ${esc(c.name)}" loading="lazy" decoding="async" style="object-position:${esc(product.imagePosition || "50% 50%")}" />`;
+    }
     const b = c.body;
     const a = c.accent;
     const shapes = {
@@ -132,7 +135,7 @@
 
   $$("[data-products]").forEach((el) => {
     const mode = el.dataset.products;
-    const list = mode === "featured" ? PRODUCTS.filter((p) => p.featured) : PRODUCTS.filter((p) => p.pets.includes(mode));
+    const list = mode === "featured" ? PRODUCTS.filter((p) => p.featured && !p.spotlight) : PRODUCTS.filter((p) => p.pets.includes(mode));
     el.innerHTML = list.map(cardHTML).join("");
     $$(`[data-count="${mode}"]`).forEach((c) => (c.textContent = `${list.length} ${list.length === 1 ? "piece" : "pieces"}`));
   });
@@ -155,6 +158,31 @@
     if (add) { addToCart(add.dataset.add, cardColor[add.dataset.add] || 0, 0, 1); return; }
     const qv = e.target.closest("[data-quick-view]");
     if (qv) openQuickView(qv.dataset.quickView);
+  });
+
+  /* Spotlight: large feature block for the product marked spotlight: true */
+  $$("[data-spotlight]").forEach((el) => {
+    const p = PRODUCTS.find((x) => x.spotlight);
+    if (!p) { el.hidden = true; return; }
+    el.innerHTML = `
+      <article class="spotlight">
+        <button class="spotlight-media" data-quick-view="${p.id}" aria-label="View ${esc(p.name)}">
+          ${p.image ? `<img src="${esc(p.image)}" alt="${esc(p.name)}" decoding="async" />` : art(p)}
+        </button>
+        <div class="spotlight-info">
+          <p class="eyebrow">${esc(p.badge || "Featured")} · ${esc(p.category || "")}</p>
+          <h3>${esc(p.name)}</h3>
+          <p class="spotlight-sub">${esc(p.subtitle)}</p>
+          <p class="spotlight-desc">${esc(p.description)}</p>
+          <ul class="spotlight-details">${p.details.slice(0, 4).map((d) => `<li>${esc(d)}</li>`).join("")}</ul>
+          <p class="spotlight-price">${money(p.price)}</p>
+          <div class="spotlight-cta">
+            <button class="btn btn-primary" data-spotlight-add="${p.id}">Add to bag</button>
+            <button class="btn btn-link" data-quick-view="${p.id}">Details <span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+      </article>`;
+    $("[data-spotlight-add]", el).addEventListener("click", () => addToCart(p.id, 0, 0, 1));
   });
 
   /* ---------------------------------------------------------------------
