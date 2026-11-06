@@ -1,9 +1,18 @@
 /* PEEKABOO product catalogue.
- * Artwork is generated as inline SVG from each product's `shape` and `colors`.
+ *
+ * To add or edit a product, copy one entry and change its fields:
+ *   pets      ["cat"], ["dog"] or both — decides which Shop section it appears in
+ *   category  short label shown on the card (Rest, Climb, Scratch, Dine, Play, Walk…)
+ *   featured  true → shown in the home page product rail
+ *   price     base price; each larger size adds ~18%
+ *   shape     which drawing to use (cave, tower, nest, arc, bowls, shelf, sofa,
+ *             tunnel, leash, pillar) until real photos replace it
  */
 window.PEEKABOO_PRODUCTS = [
   {
     id: "hideaway-cave",
+    category: "Rest",
+    featured: true,
     name: "The Hideaway",
     subtitle: "Cave bed · bouclé & walnut",
     price: 420,
@@ -23,6 +32,8 @@ window.PEEKABOO_PRODUCTS = [
   },
   {
     id: "atelier-tower",
+    category: "Climb",
+    featured: true,
     name: "Atelier Tower",
     subtitle: "Sculptural cat tree · white oak & sisal",
     price: 1180,
@@ -41,6 +52,8 @@ window.PEEKABOO_PRODUCTS = [
   },
   {
     id: "dune-nest",
+    category: "Rest",
+    featured: true,
     name: "Dune Nest",
     subtitle: "Bolstered round bed · felted wool",
     price: 290,
@@ -59,6 +72,8 @@ window.PEEKABOO_PRODUCTS = [
   },
   {
     id: "arc-scratcher",
+    category: "Scratch",
+    featured: true,
     name: "Arc Scratcher",
     subtitle: "Lounger & scratcher · cork & ash",
     price: 185,
@@ -76,6 +91,7 @@ window.PEEKABOO_PRODUCTS = [
   },
   {
     id: "atrium-bowls",
+    category: "Dine",
     name: "Atrium Dining Set",
     subtitle: "Raised bowls · stoneware & walnut",
     price: 165,
@@ -94,6 +110,8 @@ window.PEEKABOO_PRODUCTS = [
   },
   {
     id: "lumen-perch",
+    category: "Climb",
+    featured: true,
     name: "Lumen Window Perch",
     subtitle: "Wall-mounted shelf · oak & wool",
     price: 240,
@@ -111,6 +129,8 @@ window.PEEKABOO_PRODUCTS = [
   },
   {
     id: "maison-dog-bed",
+    category: "Rest",
+    featured: true,
     name: "Maison Sofa Bed",
     subtitle: "Dog sofa · walnut frame & linen",
     price: 960,
@@ -130,6 +150,7 @@ window.PEEKABOO_PRODUCTS = [
   },
   {
     id: "tunnel-hide",
+    category: "Play",
     name: "Burrow Tunnel",
     subtitle: "Felt play tunnel · merino",
     price: 140,
@@ -147,6 +168,8 @@ window.PEEKABOO_PRODUCTS = [
   },
   {
     id: "promenade-leash",
+    category: "Walk",
+    featured: true,
     name: "Promenade Lead & Collar",
     subtitle: "Vegetable-tanned leather · brass",
     price: 135,
@@ -165,6 +188,7 @@ window.PEEKABOO_PRODUCTS = [
   },
   {
     id: "pillar-scratch",
+    category: "Scratch",
     name: "Pillar Scratching Post",
     subtitle: "Tall sisal post · travertine base",
     price: 230,

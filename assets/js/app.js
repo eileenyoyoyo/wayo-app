@@ -16,8 +16,7 @@
   /* ---------------------------------------------------------------------
    * Product artwork — simple, editorial SVG still-lifes per product shape
    * ------------------------------------------------------------------- */
-  const WOOD = "#8d6239";
-  function art(product, colorIndex = 0) {
+    function art(product, colorIndex = 0) {
     const c = product.colors[colorIndex] || product.colors[0];
     const b = c.body;
     const a = c.accent;
@@ -94,30 +93,11 @@
   window.PEEKABOO_ART = art;
 
   /* ---------------------------------------------------------------------
-   * Catalogue: filtering, sorting, search
+   * Product cards — rendered into any element with data-products:
+   *   data-products="featured"  products with featured: true (home rail)
+   *   data-products="cat" | "dog"  everything for that pet (shop page)
    * ------------------------------------------------------------------- */
-  const state = { pet: "all", instinct: "all", sort: "featured", query: "" };
-  const grid = $("[data-product-grid]");
-  const countEl = $("[data-result-count]");
-  const emptyEl = $("[data-empty]");
-  const cardColor = {}; // selected swatch index per product card
-
-  function filtered() {
-    const q = state.query.trim().toLowerCase();
-    let list = PRODUCTS.filter(
-      (p) =>
-        (state.pet === "all" || p.pets.includes(state.pet)) &&
-        (state.instinct === "all" || p.instinct === state.instinct) &&
-        (!q || [p.name, p.subtitle, p.instinct, p.description].join(" ").toLowerCase().includes(q))
-    );
-    const sorters = {
-      "price-asc": (x, y) => x.price - y.price,
-      "price-desc": (x, y) => y.price - x.price,
-      name: (x, y) => x.name.localeCompare(y.name)
-    };
-    if (sorters[state.sort]) list = [...list].sort(sorters[state.sort]);
-    return list;
-  }
+  const cardColor = {}; // selected swatch index per product
 
   function cardHTML(p) {
     const ci = cardColor[p.id] || 0;
@@ -143,50 +123,22 @@
                 )
                 .join("")}
             </div>
-            <span class="instinct-tag">${esc(p.instinct)}</span>
+            <span class="instinct-tag">${esc(p.category || p.instinct)}</span>
           </div>
           <button class="btn btn-outline btn-block add-btn" data-add="${p.id}">Add to bag</button>
         </div>
       </article>`;
   }
 
-  function renderGrid() {
-    const list = filtered();
-    grid.innerHTML = list.map(cardHTML).join("");
-    countEl.textContent = `${list.length} ${list.length === 1 ? "piece" : "pieces"}`;
-    emptyEl.hidden = list.length > 0;
-  }
-
-  function setChip(groupAttr, value) {
-    $$(`[${groupAttr}]`).forEach((b) => {
-      const on = b.getAttribute(groupAttr) === value;
-      b.classList.toggle("is-active", on);
-      b.setAttribute("aria-pressed", String(on));
-    });
-  }
-
-  function setPet(v) { state.pet = v; setChip("data-pet", v); renderGrid(); }
-  function setInstinct(v) { state.instinct = v; setChip("data-instinct-filter", v); renderGrid(); }
-
-  $$("[data-pet]").forEach((b) => b.addEventListener("click", () => setPet(b.dataset.pet)));
-  $$("[data-instinct-filter]").forEach((b) => b.addEventListener("click", () => setInstinct(b.dataset.instinctFilter)));
-  $$("[data-filter-instinct]").forEach((b) =>
-    b.addEventListener("click", () => {
-      setInstinct(b.dataset.filterInstinct);
-      $("#shop").scrollIntoView({ behavior: "smooth" });
-    })
-  );
-  $$("[data-footer-pet]").forEach((a) => a.addEventListener("click", () => setPet(a.dataset.footerPet)));
-  $("#sort-select").addEventListener("change", (e) => { state.sort = e.target.value; renderGrid(); });
-  $("[data-reset-filters]").addEventListener("click", () => {
-    state.query = "";
-    $("#search-input").value = "";
-    state.pet = "all"; setChip("data-pet", "all");
-    setInstinct("all");
+  $$("[data-products]").forEach((el) => {
+    const mode = el.dataset.products;
+    const list = mode === "featured" ? PRODUCTS.filter((p) => p.featured) : PRODUCTS.filter((p) => p.pets.includes(mode));
+    el.innerHTML = list.map(cardHTML).join("");
+    $$(`[data-count="${mode}"]`).forEach((c) => (c.textContent = `${list.length} ${list.length === 1 ? "piece" : "pieces"}`));
   });
 
-  grid.addEventListener("click", (e) => {
-    const sw = e.target.closest("[data-swatch]");
+  document.addEventListener("click", (e) => {
+    const sw = e.target.closest(".product-card [data-swatch]");
     if (sw) {
       const card = sw.closest(".product-card");
       const p = byId(card.dataset.id);
@@ -199,35 +151,44 @@
       });
       return;
     }
-    const add = e.target.closest("[data-add]");
-    if (add) {
-      const p = byId(add.dataset.add);
-      addToCart(p.id, cardColor[p.id] || 0, 0, 1);
-      return;
-    }
+    const add = e.target.closest(".product-card [data-add]");
+    if (add) { addToCart(add.dataset.add, cardColor[add.dataset.add] || 0, 0, 1); return; }
     const qv = e.target.closest("[data-quick-view]");
     if (qv) openQuickView(qv.dataset.quickView);
   });
 
-  /* Search */
-  const searchBar = $(".search-bar");
-  const searchInput = $("#search-input");
-  $(".search-toggle").addEventListener("click", () => {
-    searchBar.hidden = !searchBar.hidden;
-    if (!searchBar.hidden) searchInput.focus();
+  /* ---------------------------------------------------------------------
+   * Horizontal rails: <div class="rail" id="x"> + buttons data-rail="x" data-dir="1|-1"
+   * ------------------------------------------------------------------- */
+  $$(".rail").forEach((rail) => {
+    const btns = $$(`[data-rail="${rail.id}"]`);
+    const step = () => {
+      const item = rail.firstElementChild;
+      const gap = parseFloat(getComputedStyle(rail).columnGap) || 0;
+      return item ? item.getBoundingClientRect().width + gap : rail.clientWidth;
+    };
+    btns.forEach((b) => b.addEventListener("click", () => rail.scrollBy({ left: step() * Number(b.dataset.dir), behavior: "smooth" })));
+    const sync = () => {
+      const max = rail.scrollWidth - rail.clientWidth - 2;
+      btns.forEach((b) => (b.disabled = b.dataset.dir === "-1" ? rail.scrollLeft <= 2 : rail.scrollLeft >= max));
+    };
+    rail.addEventListener("scroll", sync, { passive: true });
+    window.addEventListener("resize", sync);
+    sync();
   });
-  let searchTimer;
-  searchInput.addEventListener("input", () => {
-    clearTimeout(searchTimer);
-    searchTimer = setTimeout(() => {
-      state.query = searchInput.value;
-      renderGrid();
-      if (state.query) $("#shop").scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 180);
-  });
-  searchInput.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") { searchBar.hidden = true; $(".search-toggle").focus(); }
-  });
+
+  /* Shop sub-navigation: highlight the pet section in view */
+  const subLinks = $$(".subnav a");
+  if (subLinks.length && "IntersectionObserver" in window) {
+    const spy = new IntersectionObserver(
+      (entries) => entries.forEach((en) => {
+        if (!en.isIntersecting) return;
+        subLinks.forEach((a) => a.classList.toggle("is-active", a.getAttribute("href") === `#${en.target.id}`));
+      }),
+      { rootMargin: "-40% 0px -55% 0px" }
+    );
+    $$(".pet-section").forEach((s) => spy.observe(s));
+  }
 
   /* ---------------------------------------------------------------------
    * Quick view dialog
@@ -244,7 +205,7 @@
       qvBody.innerHTML = `
         <div class="qv-media">${art(p, sel.color)}</div>
         <div class="qv-info">
-          <p class="eyebrow">${esc(p.instinct)} · for ${p.pets.map((x) => x + "s").join(" & ")}</p>
+          <p class="eyebrow">${esc(p.category || p.instinct)} · For ${p.pets.map((x) => x + "s").join(" & ")}</p>
           <h2 id="qv-title">${esc(p.name)}</h2>
           <p class="qv-sub">${esc(p.subtitle)}</p>
           <p class="qv-price">${money(priceFor(p, sel.size))}</p>
@@ -454,7 +415,6 @@
     toastTimer = setTimeout(() => toastEl.classList.remove("is-visible"), 2600);
   }
 
-  // Mobile nav
   const menuBtn = $(".menu-toggle");
   const mobileNav = $("#mobile-nav");
   menuBtn.addEventListener("click", () => {
@@ -462,50 +422,17 @@
     mobileNav.hidden = !open;
     menuBtn.setAttribute("aria-expanded", String(open));
   });
-  $$("a", mobileNav).forEach((a) =>
-    a.addEventListener("click", () => {
-      mobileNav.hidden = true;
-      menuBtn.setAttribute("aria-expanded", "false");
-    })
-  );
 
-  // Header shadow on scroll
-  const header = $(".site-header");
-  const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 8);
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
-
-  // Newsletter
-  const form = $(".newsletter-form");
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const input = form.email;
-    const msg = $(".form-msg", form);
-    if (!input.checkValidity() || !input.value) {
-      msg.textContent = "Enter a valid email.";
-      msg.className = "form-msg is-error";
-      input.focus();
-      return;
-    }
-    msg.textContent = "Welcome. Your code is on its way.";
-    msg.className = "form-msg is-ok";
-    form.reset();
-  });
-
-  // Reveal on scroll
   if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
     const io = new IntersectionObserver(
       (entries) => entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add("is-in"); io.unobserve(en.target); } }),
-      { rootMargin: "0px 0px -10% 0px" }
+      { rootMargin: "0px 0px -8% 0px" }
     );
-    $$(".section-head, .instinct-card, .craft-copy, .voice, .journal-card").forEach((el) => {
+    $$(".section-head, .rail-head, .instinct-card, .topic").forEach((el) => {
       el.classList.add("reveal");
       io.observe(el);
     });
   }
 
-  $("[data-year]").textContent = new Date().getFullYear();
-
-  renderGrid();
   renderCart();
 })();

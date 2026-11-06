@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shop — PEEKABOO</title>
+  <meta name="description" content="Shop PEEKABOO for cats and dogs." />
+  <meta name="theme-color" content="#f4f0e8" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body data-page="shop">
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <p class="eyebrow">Shop</p>
+        <h1>The Collection</h1>
+        <nav class="subnav" aria-label="Shop by pet">
+          <a href="#cat" class="is-active">Cat</a>
+          <a href="#dog">Dog</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="pet-section" id="cat" aria-labelledby="cat-title">
+      <div class="container">
+        <div class="section-head pet-head">
+          <p class="eyebrow"><span class="idx">01</span>Cat</p>
+          <h2 id="cat-title">For cats.</h2>
+          <p class="result-count" data-count="cat"></p>
+        </div>
+        <div class="product-grid" data-products="cat"></div>
+      </div>
+    </section>
+
+    <section class="pet-section" id="dog" aria-labelledby="dog-title">
+      <div class="container">
+        <div class="section-head pet-head">
+          <p class="eyebrow"><span class="idx">02</span>Dog</p>
+          <h2 id="dog-title">For dogs.</h2>
+          <p class="result-count" data-count="dog"></p>
+        </div>
+        <div class="product-grid" data-products="dog"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

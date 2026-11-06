@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PEEKABOO — Smart Design, for City Pets</title>
-  <meta name="description" content="PEEKABOO. Smart design, for city pets. Luxury pet furniture shaped by instinct, sized for the city." />
+  <title>PEEKABOO — Designed for City Pets</title>
+  <meta name="description" content="PEEKABOO. Designed for city pets. The best pet products and knowledge, to elevate the life you share with your pet." />
   <meta name="theme-color" content="#f4f0e8" />
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,84 +12,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <!-- PEEKABOO cat mark: one drawing, reused everywhere via <use href="#peek-cat"> -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-    <symbol id="peek-cat" viewBox="-3 -3 132 58">
-      <g stroke-linejoin="round">
-        <path d="M-1 62 L22.5 2 L40.5 25.5 Q63 18.5 85.5 25.5 L103.5 2 L127 62Z" fill="#fff" stroke="#1f1b17" stroke-width="3.2"/>
-        <path d="M18 31 L24.5 13 L35.5 27.5 Q26 28.5 18 31Z" fill="#efc8b2"/>
-        <path d="M108 31 L101.5 13 L90.5 27.5 Q100 28.5 108 31Z" fill="#efc8b2"/>
-        <circle cx="38" cy="56" r="16.5" fill="#fff" stroke="#1f1b17" stroke-width="2.6"/>
-        <circle cx="40.6" cy="57" r="13.4" fill="#1f1b17"/>
-        <circle cx="88" cy="56" r="16.5" fill="#fff" stroke="#1f1b17" stroke-width="2.6"/>
-        <circle cx="85.4" cy="57" r="13.4" fill="#1f1b17"/>
-        <path d="M57.5 50.5 H68.5 L65.5 55 H60.5Z" fill="#e2621b"/>
-      </g>
-    </symbol>
-  </svg>
-
-  <div class="announce" role="note">
-    Complimentary delivery over $500
-  </div>
-
-  <header class="site-header" id="top">
-    <div class="container header-inner">
-      <button class="icon-btn menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
-      </button>
-
-      <a href="#top" class="logo" aria-label="PEEKABOO home">
-        <svg class="logo-cat" viewBox="-3 -3 132 58" aria-hidden="true"><use href="#peek-cat"/></svg>
-        <span class="logo-word">PEEKABOO</span>
-      </a>
-
-      <nav class="main-nav" aria-label="Primary">
-        <a href="#shop">Shop</a>
-        <a href="#instinct">Instinct</a>
-        <a href="#craft">Craft</a>
-        <a href="#journal">Journal</a>
-      </nav>
-
-      <div class="header-actions">
-        <button class="icon-btn search-toggle" aria-label="Search products">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        </button>
-        <button class="icon-btn cart-toggle" aria-label="Open bag" aria-controls="cart-drawer">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
-          <span class="cart-count" data-cart-count hidden>0</span>
-        </button>
-      </div>
-    </div>
-
-    <div class="search-bar" hidden>
-      <div class="container">
-        <label for="search-input" class="visually-hidden">Search products</label>
-        <input id="search-input" type="search" placeholder="Search" autocomplete="off" />
-      </div>
-    </div>
-
-    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile" hidden>
-      <a href="#shop">Shop</a>
-      <a href="#instinct">Instinct</a>
-      <a href="#craft">Craft</a>
-      <a href="#journal">Journal</a>
-    </nav>
-  </header>
-
+<body data-page="home">
   <main id="main">
-    <!-- HERO -->
+    <!-- 1. MISSION -->
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Collection 01</p>
-          <h1>Smart design,<br /><em>for city pets.</em></h1>
-          <p class="lede">Shaped by instinct. Sized for the city.</p>
+          <p class="eyebrow">Our mission</p>
+          <h1>Designed for<br /><em>city pets.</em></h1>
+          <p class="aesthetic"><span>Warm materials</span><span>Quiet forms</span><span>Precise details</span></p>
+          <p class="idea">The best pet products and knowledge, to elevate the life you share with your pet.</p>
           <div class="hero-cta">
-            <a href="#shop" class="btn btn-primary">Shop</a>
-            <a href="#instinct" class="btn btn-link">The idea <span aria-hidden="true">→</span></a>
+            <a href="shop.html" class="btn btn-primary">Shop</a>
+            <a href="library.html" class="btn btn-link">Library <span aria-hidden="true">→</span></a>
           </div>
         </div>
         <div class="hero-art" aria-hidden="true">
@@ -115,299 +50,105 @@
               <rect x="342" y="352" width="40" height="7" fill="#c9541a"/>
             </svg>
           </div>
-          <div class="hero-badge">
-            <span class="badge-num">01</span>
-            <span class="badge-text">The Hideaway<br/><small>Cave bed · bouclé &amp; walnut</small></span>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- PRESS / VALUES STRIP -->
-    <section class="strip" aria-label="Our promises">
-      <div class="container strip-inner">
-        <span>Solid wood</span>
-        <span class="dot" aria-hidden="true"></span>
-        <span>Pet-safe finishes</span>
-        <span class="dot" aria-hidden="true"></span>
-        <span>Washable</span>
-        <span class="dot" aria-hidden="true"></span>
-        <span>10-year guarantee</span>
-      </div>
-    </section>
-
-    <!-- INSTINCT -->
-    <section class="section instinct" id="instinct">
+    <!-- 2. PRODUCTS -->
+    <section class="section rail-section" aria-labelledby="products-title">
       <div class="container">
-        <div class="section-head">
-          <p class="eyebrow"><span class="idx">01</span>The idea</p>
-          <h2>Small space. <em>Big instincts.</em></h2>
-          <p class="section-lede">Every piece answers a need, and earns its place in your home.</p>
-        </div>
-
-        <div class="instinct-grid">
-          <article class="instinct-card" data-instinct="hide">
-            <span class="card-idx">01</span>
-            <div class="instinct-icon" aria-hidden="true">
-              <svg viewBox="0 0 64 64"><path d="M8 52 Q8 14 32 14 Q56 14 56 52Z"/><path d="M20 52 Q20 30 32 30 Q44 30 44 52"/></svg>
-            </div>
-            <h3>Hide</h3>
-            <p>A place to see, unseen.</p>
-            <button class="text-btn" data-filter-instinct="hide">Shop →</button>
-          </article>
-          <article class="instinct-card" data-instinct="perch">
-            <span class="card-idx">02</span>
-            <div class="instinct-icon" aria-hidden="true">
-              <svg viewBox="0 0 64 64"><path d="M10 54h44"/><path d="M32 54V18"/><path d="M18 18h28"/><path d="M22 34h20"/></svg>
-            </div>
-            <h3>Perch</h3>
-            <p>Height, without the footprint.</p>
-            <button class="text-btn" data-filter-instinct="perch">Shop →</button>
-          </article>
-          <article class="instinct-card" data-instinct="scratch">
-            <span class="card-idx">03</span>
-            <div class="instinct-icon" aria-hidden="true">
-              <svg viewBox="0 0 64 64"><path d="M18 12 L26 52"/><path d="M30 10 L36 54"/><path d="M42 12 L46 52"/></svg>
-            </div>
-            <h3>Scratch</h3>
-            <p>Claws on this. Not the sofa.</p>
-            <button class="text-btn" data-filter-instinct="scratch">Shop →</button>
-          </article>
-          <article class="instinct-card" data-instinct="nest">
-            <span class="card-idx">04</span>
-            <div class="instinct-icon" aria-hidden="true">
-              <svg viewBox="0 0 64 64"><ellipse cx="32" cy="40" rx="24" ry="12"/><ellipse cx="32" cy="38" rx="14" ry="6"/></svg>
-            </div>
-            <h3>Nest</h3>
-            <p>Curl in. Sleep deep.</p>
-            <button class="text-btn" data-filter-instinct="nest">Shop →</button>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SHOP -->
-    <section class="section shop" id="shop">
-      <div class="container">
-        <div class="shop-head">
+        <div class="rail-head">
           <div>
-            <p class="eyebrow"><span class="idx">02</span>Shop</p>
-            <h2>The Collection</h2>
+            <p class="eyebrow"><span class="idx">01</span>Selected</p>
+            <h2 id="products-title">Pieces for the city.</h2>
           </div>
-          <div class="shop-controls">
-            <div class="chip-group" role="group" aria-label="Filter by pet">
-              <button class="chip is-active" data-pet="all" aria-pressed="true">All</button>
-              <button class="chip" data-pet="cat" aria-pressed="false">Cats</button>
-              <button class="chip" data-pet="dog" aria-pressed="false">Dogs</button>
-            </div>
-            <label class="select-wrap">
-              <span class="visually-hidden">Sort products</span>
-              <select id="sort-select">
-                <option value="featured">Featured</option>
-                <option value="price-asc">Price: low to high</option>
-                <option value="price-desc">Price: high to low</option>
-                <option value="name">Name A–Z</option>
-              </select>
-            </label>
+          <div class="rail-controls">
+            <button class="rail-btn" data-rail="product-rail" data-dir="-1" aria-label="Previous">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+            </button>
+            <button class="rail-btn" data-rail="product-rail" data-dir="1" aria-label="Next">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+            </button>
           </div>
         </div>
-
-        <div class="chip-group instinct-filter" role="group" aria-label="Filter by instinct">
-          <button class="chip chip-ghost is-active" data-instinct-filter="all" aria-pressed="true">All</button>
-          <button class="chip chip-ghost" data-instinct-filter="hide" aria-pressed="false">Hide</button>
-          <button class="chip chip-ghost" data-instinct-filter="perch" aria-pressed="false">Perch</button>
-          <button class="chip chip-ghost" data-instinct-filter="scratch" aria-pressed="false">Scratch</button>
-          <button class="chip chip-ghost" data-instinct-filter="nest" aria-pressed="false">Nest</button>
-          <button class="chip chip-ghost" data-instinct-filter="dine" aria-pressed="false">Dine</button>
-          <button class="chip chip-ghost" data-instinct-filter="roam" aria-pressed="false">Roam</button>
-        </div>
-
-        <p class="result-count" aria-live="polite" data-result-count></p>
-        <div class="product-grid" data-product-grid></div>
-        <p class="empty-state" data-empty hidden>Nothing here yet. <button class="text-btn" data-reset-filters>Reset</button></p>
+        <div class="rail rail-products" id="product-rail" data-products="featured" tabindex="0" aria-label="Featured products"></div>
+        <a href="shop.html" class="btn btn-link rail-more">View all <span aria-hidden="true">→</span></a>
       </div>
     </section>
 
-    <!-- CRAFT -->
-    <section class="section craft" id="craft">
-      <div class="container craft-grid">
-        <div class="craft-art" aria-hidden="true">
-          <svg viewBox="0 0 480 520">
-            <rect width="480" height="520" fill="#3a2a1f"/>
-            <!-- oak block with grain -->
-            <rect x="80" y="300" width="320" height="140" fill="#cdae84"/>
-            <g fill="none" stroke="#b8956a" stroke-width="1.2" opacity=".8">
-              <path d="M80 322 C 160 316, 240 330, 400 320"/><path d="M80 346 C 180 340, 260 356, 400 344"/>
-              <path d="M80 372 C 150 366, 250 384, 400 370"/><path d="M80 398 C 170 392, 270 406, 400 396"/><path d="M80 420 C 200 414, 280 428, 400 418"/>
-            </g>
-            <!-- cognac leather panel with saddle stitch -->
-            <rect x="120" y="120" width="240" height="180" fill="#a0643a"/>
-            <rect x="134" y="134" width="212" height="152" fill="none" stroke="#ecd9bf" stroke-width="1.4" stroke-dasharray="6 5" opacity=".8"/>
-            <!-- orange tab -->
-            <rect x="228" y="100" width="24" height="44" fill="#e2621b"/>
-          </svg>
-        </div>
-        <div class="craft-copy">
-          <p class="eyebrow eyebrow-light"><span class="idx">03</span>Craft</p>
-          <h2>Less floor. <em>More life.</em></h2>
-          <p>Solid walnut and oak. Bouclé, wool and sisal. Covers that wash, parts that replace. Built small, built to last.</p>
-          <dl class="stats">
-            <div><dt>48h</dt><dd>hand-finishing</dd></div>
-            <div><dt>100%</dt><dd>non-toxic</dd></div>
-            <div><dt>10 yr</dt><dd>guarantee</dd></div>
-          </dl>
-        </div>
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section class="section voices" aria-labelledby="voices-title">
+    <!-- 3. INSTINCTS -->
+    <section class="section rail-section instincts" id="instincts" aria-labelledby="instincts-title">
       <div class="container">
-        <div class="section-head center">
-          <p class="eyebrow"><span class="idx">04</span>Reviews</p>
-          <h2 id="voices-title">City approved.</h2>
-        </div>
-        <div class="voice-grid">
-          <figure class="voice">
-            <blockquote>“She moved in the day it arrived. So did the compliments.”</blockquote>
-            <figcaption><strong>Hana &amp; Mochi</strong><span>British Shorthair · Seoul</span></figcaption>
-          </figure>
-          <figure class="voice">
-            <blockquote>“Two cats, one corner, zero clutter.”</blockquote>
-            <figcaption><strong>Daniel, Kit &amp; Kaboodle</strong><span>Bengals · Copenhagen</span></figcaption>
-          </figure>
-          <figure class="voice">
-            <blockquote>“Made for him. Fits our flat.”</blockquote>
-            <figcaption><strong>Priya &amp; Biscuit</strong><span>Greyhound · London</span></figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- JOURNAL -->
-    <section class="section journal" id="journal">
-      <div class="container">
-        <div class="shop-head">
+        <div class="rail-head">
           <div>
-            <p class="eyebrow"><span class="idx">05</span>Journal</p>
-            <h2>Notes</h2>
+            <p class="eyebrow"><span class="idx">02</span>Instincts</p>
+            <h2 id="instincts-title">Wild instincts. <em>City lives.</em></h2>
+            <p class="section-lede">Every pet carries instincts the city was not built for. Each is a problem we design to solve.</p>
+          </div>
+          <div class="rail-controls">
+            <button class="rail-btn" data-rail="instinct-rail" data-dir="-1" aria-label="Previous">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+            </button>
+            <button class="rail-btn" data-rail="instinct-rail" data-dir="1" aria-label="Next">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+            </button>
           </div>
         </div>
-        <div class="journal-grid">
-          <article class="journal-card">
-            <div class="journal-thumb tone-sand" aria-hidden="true"><span>Hide</span></div>
-            <p class="journal-meta">Behaviour · 3 min</p>
-            <h3>Why cats hide.</h3>
+        <div class="rail rail-instincts" id="instinct-rail" tabindex="0" aria-label="Animal instincts">
+          <article class="instinct-card">
+            <div class="instinct-top">
+              <span class="card-idx">01</span>
+              <span class="instinct-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M8 52 Q8 14 32 14 Q56 14 56 52Z"/><path d="M20 52 Q20 30 32 30 Q44 30 44 52"/></svg></span>
+            </div>
+            <h3>Natural Habitat</h3>
+            <dl class="instinct-dl">
+              <div><dt>Instinct</dt><dd>A den of their own. Shelter, scent, safety.</dd></div>
+              <div><dt>In the city</dt><dd>Open-plan rooms, constant noise, nowhere to retreat.</dd></div>
+              <div class="is-answer"><dt>Our answer</dt><dd>Enclosed retreats that give them a territory inside yours.</dd></div>
+            </dl>
           </article>
-          <article class="journal-card">
-            <div class="journal-thumb tone-olive" aria-hidden="true"><span>Perch</span></div>
-            <p class="journal-meta">Design · 3 min</p>
-            <h3>Think vertical.</h3>
+          <article class="instinct-card">
+            <div class="instinct-top">
+              <span class="card-idx">02</span>
+              <span class="instinct-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="20"/><circle cx="32" cy="32" r="8"/><path d="M32 4v12M32 48v12M4 32h12M48 32h12"/></svg></span>
+            </div>
+            <h3>Hunting</h3>
+            <dl class="instinct-dl">
+              <div><dt>Instinct</dt><dd>Stalk, chase, pounce. Every day.</dd></div>
+              <div><dt>In the city</dt><dd>Indoor life leaves the drive unused: boredom, stress, damage.</dd></div>
+              <div class="is-answer"><dt>Our answer</dt><dd>Play and hiding paths that turn the home into hunting ground.</dd></div>
+            </dl>
           </article>
-          <article class="journal-card">
-            <div class="journal-thumb tone-clay" aria-hidden="true"><span>Nest</span></div>
-            <p class="journal-meta">Wellbeing · 3 min</p>
-            <h3>Why dogs circle.</h3>
+          <article class="instinct-card">
+            <div class="instinct-top">
+              <span class="card-idx">03</span>
+              <span class="instinct-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M10 54h44"/><path d="M32 54V12"/><path d="M18 22h28"/><path d="M22 38h20"/></svg></span>
+            </div>
+            <h3>Height</h3>
+            <dl class="instinct-dl">
+              <div><dt>Instinct</dt><dd>Watch from above. Feel in control.</dd></div>
+              <div><dt>In the city</dt><dd>Small floor plans. No trees, no high ground.</dd></div>
+              <div class="is-answer"><dt>Our answer</dt><dd>Vertical pieces with a small footprint. Walls become territory.</dd></div>
+            </dl>
+          </article>
+          <article class="instinct-card">
+            <div class="instinct-top">
+              <span class="card-idx">04</span>
+              <span class="instinct-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M8 50 C 20 50, 20 30, 32 30 S 44 14, 56 14"/><circle cx="8" cy="50" r="3"/><circle cx="56" cy="14" r="3"/></svg></span>
+            </div>
+            <h3>Roaming</h3>
+            <dl class="instinct-dl">
+              <div><dt>Instinct</dt><dd>Explore, sniff, cover ground.</dd></div>
+              <div><dt>In the city</dt><dd>Short leashes, busy streets, long hours alone.</dd></div>
+              <div class="is-answer"><dt>Our answer</dt><dd>Better daily walks, and calm spaces for the hours between.</dd></div>
+            </dl>
           </article>
         </div>
-      </div>
-    </section>
-
-    <!-- NEWSLETTER -->
-    <section class="newsletter">
-      <div class="container newsletter-inner">
-        <div>
-          <h2>Join the Den</h2>
-          <p>First access. 10% off your first order.</p>
-        </div>
-        <form class="newsletter-form" novalidate>
-          <label for="nl-email" class="visually-hidden">Email address</label>
-          <input id="nl-email" type="email" name="email" placeholder="Email" required autocomplete="email" />
-          <button type="submit" class="btn btn-primary">Subscribe</button>
-          <p class="form-msg" role="status" aria-live="polite"></p>
-        </form>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <a href="#top" class="logo-arch" aria-label="PEEKABOO home">
-          <svg viewBox="0 0 320 170" aria-hidden="true">
-            <path id="footer-arc" d="M36 108 Q160 4 284 108" fill="none"/>
-            <text text-anchor="middle"><textPath href="#footer-arc" startOffset="50%">PEEKABOO</textPath></text>
-            <use href="#peek-cat" x="67" y="91" width="186" height="82"/>
-          </svg>
-        </a>
-        <p>Smart design, for city pets.</p>
-      </div>
-      <div>
-        <h4>Shop</h4>
-        <ul>
-          <li><a href="#shop" data-footer-pet="cat">For cats</a></li>
-          <li><a href="#shop" data-footer-pet="dog">For dogs</a></li>
-          <li><a href="#shop">New</a></li>
-          <li><a href="#shop">Gift cards</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Care</h4>
-        <ul>
-          <li><a href="#">Delivery</a></li>
-          <li><a href="#">Returns</a></li>
-          <li><a href="#">Care</a></li>
-          <li><a href="#">Parts</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Studio</h4>
-        <ul>
-          <li><a href="#instinct">The idea</a></li>
-          <li><a href="#craft">Workshop</a></li>
-          <li><a href="#journal">Journal</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="container footer-base">
-      <span>© <span data-year></span> PEEKABOO Studio. All rights reserved.</span>
-      <span>Made for the city.</span>
-    </div>
-  </footer>
-
-  <!-- QUICK VIEW -->
-  <dialog class="quick-view" id="quick-view" aria-labelledby="qv-title">
-    <button class="icon-btn qv-close" aria-label="Close" data-close-dialog>
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
-    </button>
-    <div class="qv-body" data-qv-body></div>
-  </dialog>
-
-  <!-- CART -->
-  <div class="drawer-scrim" data-cart-scrim hidden></div>
-  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping bag" aria-hidden="true" tabindex="-1">
-    <div class="cart-head">
-      <h2>Your bag</h2>
-      <button class="icon-btn" aria-label="Close bag" data-cart-close>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
-      </button>
-    </div>
-    <div class="cart-shipping" data-cart-shipping></div>
-    <ul class="cart-items" data-cart-items></ul>
-    <div class="cart-empty" data-cart-empty>
-      <p>Your bag is empty.</p>
-      <a href="#shop" class="btn btn-primary" data-cart-close>Shop</a>
-    </div>
-    <div class="cart-foot" data-cart-foot hidden>
-      <div class="cart-row"><span>Subtotal</span><strong data-cart-subtotal>$0</strong></div>
-      <p class="cart-note">Taxes calculated at checkout.</p>
-      <button class="btn btn-primary btn-block" data-checkout>Checkout</button>
-    </div>
-  </aside>
-
-  <div class="toast" role="status" aria-live="polite" data-toast></div>
-
+  <script src="assets/js/layout.js"></script>
   <script src="assets/js/products.js"></script>
   <script src="assets/js/app.js"></script>
 </body>
